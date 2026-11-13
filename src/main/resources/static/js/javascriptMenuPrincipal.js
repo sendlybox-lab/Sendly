@@ -33,7 +33,7 @@ const buttonsSelecionarServico = document.querySelector("#selecionarServicoButto
 async function menuInfo(){ 
 const usuarioId = sessionStorage.getItem('usuarioId');//Recebe o Cookie
 let data = await fetch(
-    `https://sendly.up.railway.app/cadastro?id=${usuarioId}`
+    `https://sendly-production-8595bcd5.up.railway.app/cadastro?id=${usuarioId}`
 );
 
 data = await data.json();
