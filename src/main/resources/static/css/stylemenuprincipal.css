@@ -143,6 +143,36 @@ main{
     height: 100%;
 }
 
+#mainPosHero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    width: 90%;
+    height: 60%;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+#mainPosHero section{
+    width: 100%;
+}
+
+#mainPosHero .boxHero{
+    justify-content: end;
+}
+
+#imgHero2PosHero1{
+    width: 50%;
+    animation: animationu 6s infinite ease-in-out;
+}
+
+#boxDaImgHero2PosHero1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .section{
     margin-top: 3dvw;
 }
@@ -414,7 +444,6 @@ footer section p{
 }
 
 #buttonsHero #selecionarServicoButton{
-    margin-top: 30dvh;
     background-color: #B3B3B3;
 }
 
@@ -483,7 +512,21 @@ footer section p{
     }
 
     main{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 100%;
         height: auto;
+    }
+
+    #mainPosHero{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        border-radius: 0px;
     }
 
     .boxHero{
@@ -523,6 +566,10 @@ footer section p{
 
     #buttonsHero button:nth-child(3){
         margin-top: 12dvw;
+    }
+
+    #buttonsHero #selecionarServicoButton{
+        margin-top: 30dvh;
     }
 
     footer section p{

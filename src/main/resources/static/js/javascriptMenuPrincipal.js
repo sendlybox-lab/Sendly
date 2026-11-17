@@ -18,7 +18,8 @@ const totalEntregasSolicitadas = document.querySelector('#totalEntregasSolicitad
 
 //Todo este registro de HTML em variáveis abaixo morre ao trocar o main, por conta da cascata
 //Por isso o Event Listener é no main com condição para os filhos e não neles, além de buscar por id e não referência
-const main = document.querySelector('main');//Único vivo
+const body = document.querySelector('body');//Únicos vivos
+const main = document.querySelector('main');//Únicos vivos
 const buttonsRealizarEntrega = document.querySelector("#realizarEntrega");
 const buttonsRastrearPedido = document.querySelector("#rastrearPedido");
 const buttonsTrabalheConosco = document.querySelector("#trabalheConosco");
@@ -53,12 +54,13 @@ main.addEventListener(`click`, function(click){
 
     if(button || main.contains(button)){
         setup(button);
+        main.id = "mainPosHero";
     }
 });
 
 function setup(button){
     switch(button.id){
-        case "realizarEntrega":buttonsRealizarEntregaPage(); 
+        case "realizarEntrega":buttonsRealizarEntregaPage();
         break;
         case "selecionarServicoButton":buttonsSelecionarServicoPage();
         break;
@@ -68,6 +70,15 @@ function setup(button){
 
 async function buttonsRealizarEntregaPage(){ 
     main.innerHTML = `
+        <section class="noCelular">
+            <h1>Favor selecionar a opção desejante</h1>
+            <p>Caso sua intenção seja solicitar uma entrega aperte em "SOLICITAR SERVIÇO", 
+            agora para trabalhar como entregador de algum pacote aperte em "SELECIONAR SERVIÇO".</p>
+            <div id="boxDaImgHero2PosHero1">
+                <img id="imgHero2PosHero1" src="./imgs/icon_box.png" alt="">
+            </div>
+            
+        </section>
         <section class="boxHero section">
                 <div id="buttonsHero">
                     <button id="realizarEntrega">Solicitar Serviço</button>
